@@ -61,7 +61,7 @@ echo -n "http://<IP>:<PORT>/test.php" |md5sum
 
 Using this output we can navigate to where our cached font file resides by supplying the file path /dompdf/lib/fonts/test_normal_<md5hash>.php in the URL. Upon navigating to the link our embedded PHP code is executed returning the contents of the flag.txt file.
 
-
+![](https://miro.medium.com/v2/resize:fit:764/1*Cs5nhwywcFtOLxcsK4uPSg.png)
 
 If you’ve made it this far, I hope you may have learned something new. I sure did and found this challenge to be fairly difficult, but quite rewarding. Thanks for STICKERing around…
 
