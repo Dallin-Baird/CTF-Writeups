@@ -67,6 +67,6 @@ If you’ve made it this far, I hope you may have learned something new. I sure 
 
 **Resources/Links:**
 
-(https://snyk.io/blog/security-alert-php-pdf-library-dompdf-rce/)(https://snyk.io/blog/security-alert-php-pdf-library-dompdf-rce/)  
-(https://www.optiv.com/insights/source-zero/blog/exploiting-rce-vulnerability-dompdf)(https://www.optiv.com/insights/source-zero/blog/exploiting-rce-vulnerability-dompdf)  
-(https://github.com/positive-security/dompdf-rce/](https://github.com/positive-security/dompdf-rce/)
+https://snyk.io/blog/security-alert-php-pdf-library-dompdf-rce/)(https://snyk.io/blog/security-alert-php-pdf-library-dompdf-rce/
+https://www.optiv.com/insights/source-zero/blog/exploiting-rce-vulnerability-dompdf)(https://www.optiv.com/insights/source-zero/blog/exploiting-rce-vulnerability-dompdf  
+https://github.com/positive-security/dompdf-rce/](https://github.com/positive-security/dompdf-rce/
