@@ -8,7 +8,7 @@ This challenge first provides us with two different web applications, executing 
 
 When first navigating to the flask web application, we are greeted with the following message. 
 
-![[Webpage.png]]
+![](https://miro.medium.com/v2/resize:fit:627/1*zhglQCxuuOBiS86Kp-LufQ.png)
 
 Revealing the source code doesn't exhibit any interesting or unusual behavior so I began to continue mapping the application and explored the functionality that handles the signup process. 
 
@@ -17,9 +17,11 @@ The signup form is quite traditional but allows the user to define a Tier Level 
 After continuing my testing, it appears that the Blue, Red, and Green tiers are typical low-privileged users with no additional functionality to explore. 
 
 
-![[signup.png]]
+![](https://miro.medium.com/v2/resize:fit:627/1*UfV4dknuwjbiFPNipk6HOQ.png)
 
-When attempting to select the **Gold** tier in the signup process, the application only allows the CEO to achieve this tier level.![[gold.png]]
+When attempting to select the **Gold** tier in the signup process, the application only allows the CEO to achieve this tier level.
+
+![](https://miro.medium.com/v2/resize:fit:627/1*pcoBhGYikJVGG15-B3qluw.png)
 
 Intercepting and manually testing the HTTP POST request to try and bypass any trivial security controls did not highlight anything of interest. I then pivoted my testing to the PHP web application, but the sign up process is protected by a secret key value that gets sent as an HTTP header. 
 
@@ -62,7 +64,7 @@ Location: /signup
 
 Navigate to the PHP web application and supply the credentials used in the sign up process to receive the flag!
 
-![[flag.png]]
+![](https://miro.medium.com/v2/resize:fit:627/1*cOz-jgLwEZLMZZKScYteRw.png)
 
 
 Overall this challenge showcased a clever bypass technique that exploited the divergent interpretations of repeated parameters in the Flask and PHP applications. I had quite the enjoyable time working through some of the challenges this year and look forward to participating in next years competition!
