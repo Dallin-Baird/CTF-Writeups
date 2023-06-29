@@ -2,7 +2,7 @@
 
 Hello all! This past weekend, I competed in Google's annual CTF event and I wanted to showcase the solution to their web challenge **Under-Construction**. For those who may be unfamiliar, Capture the Flag events are a type of competition in the realm of cybersecurity where participants are presented with a series of puzzles, tasks, and vulnerabilities that they must identify and exploit to find the hidden flag. 
 
-![(https://miro.medium.com/v2/resize:fit:627/1*riUIWHpVkO8MI7FwSJaq9A.png)]
+![](https://miro.medium.com/v2/resize:fit:627/1*riUIWHpVkO8MI7FwSJaq9A.png)
 
 This challenge first provides us with two different web applications, executing on different technology stacks, and the initial information provided  depicts there may be a way to exploit the interaction between these two applications. 
 
