@@ -2,11 +2,11 @@
 
 Hello all! This past weekend I had the opportunity to participate in PlexHax's CTF event hosted by PlexTrac. I thoroughly enjoyed working through the available challenges and wanted to document the solution to the 'myapp' challenge. 
 
-![image](https://miro.medium.com/v2/resize:fit:627/1*OBtegrwInvE-DLh39uORzQ.png)
+![](https://miro.medium.com/v2/resize:fit:627/1*OBtegrwInvE-DLh39uORzQ.png)
 
 When first navigating to the target application, a search page is rendered allowing the user to search for different products based on attributes such as Price, Category, and Product Name. 
 
-![image](https://miro.medium.com/v2/resize:fit:437/1*7R4eB6Mlq74sWKi4mcBbrQ.png)
+![](https://miro.medium.com/v2/resize:fit:437/1*7R4eB6Mlq74sWKi4mcBbrQ.png)
 
 During the manual testing process, a noteworthy behavior emerges: the application seems to accept string concatenation. Specifically, the input fields appear to treat the `'+'` character as a legitimate means of concatenating strings. This behavior becomes evident when the input `'te'+'st'` results in the display of the word `'test'`.
 
@@ -94,7 +94,7 @@ Here, `@@version` refers to the DBMS version string, and `MID()` extracts the fi
 
 This is a great task for Burp Intruder, a tool capable of automating repetitive HTTP requests, and inserting customized payloads into designated positions iteratively. Capture the search request and forward it to Intruder.
 
-![image](https://miro.medium.com/v2/resize:fit:437/1*7R4eB6Mlq74sWKi4mcBbrQ.png)
+![](https://miro.medium.com/v2/resize:fit:437/1*7R4eB6Mlq74sWKi4mcBbrQ.png)
 
 Modify the attack type to use `Cluster Bomb` which allows for multiple positions to be iteratively tested based on the supplied payloads, providing all possible permutations. 
 
@@ -111,7 +111,7 @@ Add a new payload marker to the version number we're attempting to check (5), an
 
 Select the payloads tab and use the `Numbers` payload type for both of our payload sets. Define our range from 0-10 with a step of 1 to iterate through all numbers and start the attack. 
 
-![image](https://miro.medium.com/v2/resize:fit:627/1*eR7opk9UgPQffrRHYgbpOw.png)
+![](https://miro.medium.com/v2/resize:fit:627/1*eR7opk9UgPQffrRHYgbpOw.png)
 
 The "Cluster Bomb" attack type facilitates the systematic iteration through various values at specific positions within the payload. By selecting the "Numbers" payload type and defining the range from 0 to 10 with a step of 1, the attack will execute the payload with each number in the defined range, substituting the markers accordingly.
 
@@ -123,7 +123,7 @@ Now that we've extracted some important information using manual testing, we can
 
 It's important to note during this testing, I managed to discover HTTP Parameter Pollution (HPP) for the `query` parameter. Though HPP vulnerabilities don't directly cause SQLi vulnerabilities, they can open up additional attack vectors and allow exploitation through previously tested parameters. 
 
-![image](https://miro.medium.com/v2/resize:fit:627/1*Zpv-DX5medrtwoneCOlqaQ.png)
+![](https://miro.medium.com/v2/resize:fit:627/1*Zpv-DX5medrtwoneCOlqaQ.png)
 
 I included the additional query parameter and saved the HTTP request to a file titled 'request.txt'.
 
@@ -136,7 +136,7 @@ Host: myapp.plexhax.com
 sqlmap -r request.txt -a -p query
 ```
 
-![image](https://miro.medium.com/v2/resize:fit:533/1*d-pWtxrGmm6W3kSZ3eOvWQ.png)
+![](https://miro.medium.com/v2/resize:fit:533/1*d-pWtxrGmm6W3kSZ3eOvWQ.png)
 
 And there is our ~~flag~~! As you may have noticed from the challenge description, the flag is only obtained after using this value as the *report name* through their reporting platform. Once submitted, the redeemable flag is presented.  
 
