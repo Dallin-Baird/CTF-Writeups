@@ -95,6 +95,7 @@ Here, `@@version` refers to the DBMS version string, and `MID()` extracts the fi
 This is a great task for Burp Intruder, a tool capable of automating repetitive HTTP requests, and inserting customized payloads into designated positions iteratively. Capture the search request and forward it to Intruder.
 
 ![](https://miro.medium.com/v2/resize:fit:627/1*ZlruPhSvQoq32sX-dmunqA.png)
+
 Modify the attack type to use `Cluster Bomb` which allows for multiple positions to be iteratively tested based on the supplied payloads, providing all possible permutations. 
 
 ```HTTP
